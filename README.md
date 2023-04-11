@@ -8,8 +8,6 @@
 
 Проект работает на движке [11ty](https://www.11ty.dev). Для шаблонов используем [Nunjucks](https://mozilla.github.io/nunjucks/), для стилей — CSS, для скриптов — JavaScript.
 
-## Разработка
-
 Установка зависимостей:
 
 ```
