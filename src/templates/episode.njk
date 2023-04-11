@@ -1,0 +1,26 @@
+---
+layout: page.njk
+---
+
+<div class="container">
+	<div class="content">
+		<main class="main">
+			<div class="episode-information">
+				<span class="episode-information__number">Выпуск {{ number }}</span>
+				<span class="episode-information__date">
+					<time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+				</span>
+				<h1>{{ title }}</h1>
+			</div>
+
+			<div class="post">
+				<audio controls>
+					<source src="{{ audio }}" type="audio/x-m4a">
+					Ваш браузер не поддерживает встроенные аудио. Попробуйте <a href="{{ audio }}" download>скачать файл</a>.
+				</audio>
+
+				{{ content | safe }}
+			</div>
+		</main>
+	</div>
+</div>

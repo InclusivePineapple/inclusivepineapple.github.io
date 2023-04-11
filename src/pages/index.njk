@@ -1,0 +1,29 @@
+---
+layout: page.njk
+permalink: index.html
+---
+
+<div class="container">
+	<div class="content">
+		<main class="main">
+			<h1>О подкасте</h1>
+
+			<p>Текст про подкаст, ведущих, благодарности всем причастным.</p>
+
+			<section aria-labelledby="heading">
+				<h2 id="heading">Последние выпуски</h2>
+
+				{% set maxEpisodes = collections.episode.length | min(5) %}
+				{% set episodeslist = collections.episode | slice(-5) %}
+				<div class="cards">
+					{% include "card.njk" %}
+				</div>
+
+				{% if maxEpisodes === 5 %}
+					<a href="{{ '/episodes' | url }}">Все выпуски</a>
+				{% endif %}
+			</section>
+
+		</main>
+	</div>
+</div>

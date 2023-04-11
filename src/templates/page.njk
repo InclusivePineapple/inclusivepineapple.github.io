@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+	{% if page.url == "/" %}
+		{% set isIndex = true %}
+	{% else %}
+		{% set titleSub = " — Инклюзивный ананас" %}
+		{% set isIndex = false %}
+	{% endif %}
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{{ description or site.description }}">
+	<title>{{ title or site.title }}{{ titleSub }}</title>
+	{% include "open-graph.njk" %}
+	<script type="module" src="/scripts/scripts.js"></script>
+	<link rel="stylesheet" href="/styles/styles.css">
+	<link rel="alternate" href="https://site-name.ru/feed.xml/" type="application/rss+xml" title="Инклюзивный ананас">
+	{% include "favicons.njk" %}
+</head>
+<body class="body">
+	{% include "header.njk" %}
+
+	{{ content | safe }}
+
+	{% include "footer.njk" %}
+
+</body>
+</html>

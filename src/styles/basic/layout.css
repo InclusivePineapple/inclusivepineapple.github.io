@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	color: inherit;
+}
+
+.page {
+	font-size: 20px;
+}
+
+@media (max-width: 768px) {
+	.page {
+		font-size: 16px;
+	}
+}
+
+.body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	margin: 0;
+	font-family: "Roboto", "Arial", "Helvetica", sans-serif;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: #272727;
+	background: #eaeaea;
+}
+
+.container {
+	flex: 1 0 auto;
+	margin-top: 60px;
+}
+
+.content {
+	width: 100%;
+	max-width: 780px;
+	margin: 0 auto;
+	padding: 0 20px;
+}

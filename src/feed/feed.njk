@@ -1,0 +1,49 @@
+---
+title: Инклюзивный ананас
+description: Ежемесячный подкаст о цифровой доступности.
+authorOne: Глаша Жур
+authorTwo: Таня Фокина
+language: ru
+homepage: https://site-name.ru
+url: https://site-name.ru/episodes
+email: inclusivepineapple@gmail.com
+permalink: feed.xml
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+    <channel>
+        <title>{{ title }}</title>
+        <itunes:author>{{ authorOne }}, {{ authorTwo }}</itunes:author>
+        <itunes:owner>
+            <itunes:email>{{ email }}</itunes:email>
+        </itunes:owner>
+        <description>{{ description }}</description>
+        <itunes:image href="{{ homepage }}/assests/cover.jpg"/>
+        <language>{{ language }}</language>
+        <link>{{ homepage }}</link>
+        <itunes:category text="Technology"/>
+        <itunes:category text="Accessibility"/>
+        <itunes:explicit>no</itunes:explicit>
+
+        {% set lastEpisode = collections.episode | last %}
+        <lastBuildDate>{{ lastEpisode.date.toUTCString() }}</lastBuildDate>
+
+        <atom:link href="{{ homepage }}/feed.xml" rel="self" type="application/rss+xml"/>
+
+        {%- for episode in collections.episode | reverse  %}
+            <item>
+                <title>{{ episode.data.title }}</title>
+                <description>{{ episode.data.description }}</description>
+                <itunes:episode>{{ episode.data.number }}</itunes:episode>
+                <pubDate>{{ episode.date.toUTCString() }}</pubDate>
+                <link>{{ homepage }}{{ episode.url }}</link>
+                <itunes:author>{{ authorOne }}, {{ authorTwo }}</itunes:author>
+                <itunes:duration>{{ episode.data.duration }}</itunes:duration>
+                <enclosure type="audio/mpeg" url="{{ homepage }}{{ episode.url }}{{ episode.data.audio }}" length="{{ episode.data.duration }}"/>
+                <guid isPermaLink="true">{{ homepage }}{{ episode.url }}{{ episode.data.audio }}</guid>
+            </item>
+        {%- endfor %}
+
+    </channel>
+</rss>

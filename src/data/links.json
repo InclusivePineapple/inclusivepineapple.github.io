@@ -1,0 +1,19 @@
+{
+  "social": {
+	  "twitter": "https://twitter.com/inclusivepiney/",
+    "facebook": "https://www.facebook.com/inclusivepineapple/",
+    "telegram": "https://t.me/inclusivepineapple/"
+  },
+  "platforms": {
+	  "googlepodcasts": "https://podcasts.google.com/",
+	  "apple": "https://podcasts.apple.com/",
+    "yandex": "https://music.yandex.ru/",
+    "spotify": "https://open.spotify.com/",
+    "youtube": "https://www.youtube.com/"
+    
+  },
+  "copyright": {
+    "github": "https://github.com/",
+	  "eleventy": "https://www.11ty.dev/"
+  }
+}

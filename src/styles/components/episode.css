@@ -1,0 +1,22 @@
+.episode-information {
+	margin-bottom: 52px;
+}
+
+.episode-information__number,
+.episode-information__date {
+	font-size: 0.8rem;
+}
+
+.episode-information__number:after {
+	content: "";
+	display: inline-block;
+	margin-left: 6px;
+	width: 4px;
+	height: 4px;
+	border-radius: 100px;
+    background: #272727;
+}
+
+.content audio {
+	width: 100%;
+}

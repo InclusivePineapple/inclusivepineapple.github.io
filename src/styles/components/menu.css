@@ -1,0 +1,31 @@
+.nav {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.logo-link__image {
+	width: 160px;
+	height: auto;
+	background: #FFE665;
+	border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+	.logo-link__image {
+		width: 100px;
+	}
+}
+
+.nav .logo-link {
+	display: inline-flex;
+	border-bottom: 0;
+}
+
+.nav .logo-link:hover {
+	background: inherit;
+}
+
+.nav .logo-link:hover .logo-link__image {
+	background: #168555;
+}

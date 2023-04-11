@@ -1,0 +1,9 @@
+@media (forced-colors) {
+	.card {
+		border: 2px solid transparent;
+	}
+
+	.card:focus-within {
+		outline: 3px solid transparent;
+	}
+}

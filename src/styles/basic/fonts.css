@@ -1,0 +1,29 @@
+/* Регулярное начертание */
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url("../fonts/roboto-v30-cyrillic_latin-regular.woff2") format("woff2"),
+		url("../fonts/roboto-v30-cyrillic_latin-regular.woff") format("woff")
+}
+
+/* Жирное начертание */
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url('../fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'),
+		url('../fonts/roboto-v30-cyrillic_latin-700.woff') format('woff')
+}
+
+/* Моно */
+@font-face {
+	font-family: "Roboto Mono";
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src: url('../fonts/roboto-mono-v22-latin-regular.woff2') format('woff2'),
+		url('../fonts/roboto-mono-v22-latin-regular.woff') format('woff')
+}
