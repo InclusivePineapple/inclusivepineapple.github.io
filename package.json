@@ -6,9 +6,10 @@
   "author": "Inclusive Pineapple",
   "license": "ISC",
   "scripts": {
-    "buildCss": "postcss src/styles/styles.css -o docs/styles/styles.css",
-    "test": "concurrently \"postcss src/styles/styles.css -o docs/styles/styles.css -w\" \"eleventy --serve\"",
-    "build": "eleventy --quiet && npm run buildCss"
+    "buildCss": "postcss src/styles/styles.css -o dist/styles/styles.css",
+    "test": "concurrently \"postcss src/styles/styles.css -o dist/styles/styles.css -w\" \"eleventy --serve\"",
+    "build": "eleventy --quiet && npm run buildCss",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@11ty/eleventy": "^1.0.2",
@@ -18,6 +19,7 @@
     "concurrently": "^8.0.1",
     "del": "6.1",
     "fs": "^0.0.1-security",
+    "gh-pages": "^5.0.0",
     "html-minifier": "^4.0.0",
     "markdown-it": "^13.0.1",
     "nunjucks": "^3.2.3",
