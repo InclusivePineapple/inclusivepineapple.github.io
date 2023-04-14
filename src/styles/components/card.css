@@ -28,8 +28,8 @@
 }
 
 .card:hover {
-	background: #14764B;
-    color: #fff;
+	background: #d3d3d3;
+    color: inherit;
 }
 
 .card:focus-within {
