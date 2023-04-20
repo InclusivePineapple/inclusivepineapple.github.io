@@ -39,3 +39,7 @@
 .content h3 {
     margin-bottom: 16px;
 }
+
+.content code {
+    font-family: "Roboto Mono", "Courier New", monospace;
+}
