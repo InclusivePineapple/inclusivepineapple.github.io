@@ -125,6 +125,11 @@
     margin-bottom: 16px;
 }
 
+.content code,
+.content kbd {
+    font-family: "Roboto Mono", "Courier New", monospace;
+}
+
 .content a {
     text-decoration: none;
     color: #14764B;
