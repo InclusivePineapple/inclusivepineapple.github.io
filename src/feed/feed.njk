@@ -38,7 +38,7 @@ permalink: feed.xml
                 <link>{{ homepage }}{{ episode.url }}</link>
                 <itunes:author>{{ authorOne }}, {{ authorTwo }}</itunes:author>
                 <itunes:duration>{{ episode.data.duration }}</itunes:duration>
-                <enclosure type="audio/mpeg" url="{{ homepage }}{{ episode.url }}{{ episode.data.audio }}" length="{{ episode.data.duration }}"/>
+                <enclosure type="audio/mpeg" url="{{ homepage }}{{ episode.url }}{{ episode.data.audio }}" length="{{ episode.data.audioSize }}"/>
                 <guid isPermaLink="true">{{ homepage }}{{ episode.url }}{{ episode.data.audio }}</guid>
             </item>
         {%- endfor %}

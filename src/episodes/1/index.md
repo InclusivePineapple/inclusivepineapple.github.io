@@ -2,8 +2,9 @@
 title: The WebAIM Million 2023, нативный .visually-hidden, тег search, ChatGPT и доступная кнопка
 description: В первом выпуске подкаста «Инклюзивный ананас» обсуждаем отчёт WebAIM о доступности миллиона домашних страниц за 2023 год; зачем нужен класс .visually-hidden и нужна ли его нативная поддержка в HTML или CSS; что делает тег search и чего ещё из WAI-ARIA нам не хватает в HTML; заменит ли ChatGPT специалистов по доступности и поможет ли сверстать доступную кнопку; два события по веб-доступности.
 number: 1
-duration: 5018
+duration: 3018
 audio: episode-1.mp3
+audioSize: 60491700
 date: 2023-03-25
 cover: cover.jpg
 tags: episode
