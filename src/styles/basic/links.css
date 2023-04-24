@@ -14,3 +14,7 @@
     outline-offset: 1px;
     border-bottom: 0;
 }
+
+.logo-link:focus {
+    border-radius: 50%;
+}
