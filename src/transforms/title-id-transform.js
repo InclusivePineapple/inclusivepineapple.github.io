@@ -6,7 +6,7 @@ const titleIdMap = JSON.parse(
 );
 
 /**
- * @param {Window} window
+ * @param {ReturnType<import('linkedom').parseHTML>} window
  * @param {string} content
  * @param {string} outputPath
  */
