@@ -21,6 +21,7 @@
     "fs": "^0.0.1-security",
     "gh-pages": "^5.0.0",
     "html-minifier": "^4.0.0",
+    "linkedom": "^0.14.25",
     "markdown-it": "^13.0.1",
     "nunjucks": "^3.2.3",
     "postcss": "^8.4.21",

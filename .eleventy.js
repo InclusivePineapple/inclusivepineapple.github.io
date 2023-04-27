@@ -3,6 +3,7 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const prettyData = require("pretty-data");
 const htmlmin = require("html-minifier");
+const linkedom = require("linkedom");
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/manifest.json');
@@ -74,6 +75,24 @@ module.exports = function(eleventyConfig) {
 		}
 		return content;
 	});
+
+	const htmlTransforms = [
+		require('./src/transforms/title-id-transform.js')
+	];
+
+	eleventyConfig.addTransform('html-transform', async (content, outputPath) => {
+		if (!outputPath || !outputPath.endsWith('.html')) {
+			return content;
+		}
+
+		const window = linkedom.parseHTML(content);
+
+		for (const transform of htmlTransforms) {
+			await transform(window, content, outputPath);
+		}
+
+		return window.document.toString();
+	})
 
 	return {
 		dir: {
