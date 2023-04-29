@@ -6,8 +6,6 @@ duration: 3018
 audio: episode-1.mp3
 date: 2023-04-25
 cover: cover.jpg
-tags: episode
-layout: episode.njk
 ---
 
 ## Темы
