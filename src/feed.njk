@@ -1,33 +1,28 @@
 ---
-title: Инклюзивный ананас
-description: Ежемесячный подкаст, где мы обсуждаем всё, что связано с цифровой доступностью, и делимся свежими новостями и событиями.
 authorOne: Глаша Жур
 authorTwo: Таня Фокина
-language: ru
-homepage: https://inclusivepineapple.github.io
-url: https://inclusivepineapple.github.io/episodes
 email: inclusivepineapple@gmail.com
 permalink: feed.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
     <channel>
-        <title>{{ title }}</title>
+        <title>{{ site.title }}</title>
         <itunes:author>{{ authorOne }}, {{ authorTwo }}</itunes:author>
         <itunes:owner>
             <itunes:email>{{ email }}</itunes:email>
         </itunes:owner>
-        <description>{{ description }}</description>
-        <itunes:image href="{{ homepage }}/assets/cover.jpg"/>
-        <language>{{ language }}</language>
-        <link>{{ homepage }}</link>
+        <description>{{ site.description }}</description>
+        <itunes:image href="{{ site.siteLink }}/assets/cover.jpg"/>
+        <language>{{ site.language }}</language>
+        <link>{{ site.siteLink }}</link>
         <itunes:category text="Technology"/>
         <itunes:explicit>no</itunes:explicit>
 
         {% set lastEpisode = collections.episode | last %}
         <lastBuildDate>{{ lastEpisode.date.toUTCString() }}</lastBuildDate>
 
-        <atom:link href="{{ homepage }}/feed.xml" rel="self" type="application/rss+xml"/>
+        <atom:link href="{{ site.siteLink }}/feed.xml" rel="self" type="application/rss+xml"/>
 
         {%- for episode in collections.episode | reverse  %}
             <item>
@@ -35,11 +30,11 @@ permalink: feed.xml
                 <description>{{ episode.data.description }}</description>
                 <itunes:episode>{{ episode.data.number }}</itunes:episode>
                 <pubDate>{{ episode.date.toUTCString() }}</pubDate>
-                <link>{{ homepage }}{{ episode.url }}</link>
+                <link>{{ site.siteLink }}{{ episode.url }}</link>
                 <itunes:author>{{ authorOne }}, {{ authorTwo }}</itunes:author>
                 <itunes:duration>{{ episode.data.duration }}</itunes:duration>
-                <enclosure type="audio/mpeg" url="{{ homepage }}{{ episode.url }}{{ episode.data.audio }}" length="{{ episode.data.audioSize }}"/>
-                <guid isPermaLink="true">{{ homepage }}{{ episode.url }}{{ episode.data.audio }}</guid>
+                <enclosure type="audio/mpeg" url="{{ site.siteLink }}{{ episode.url }}{{ episode.data.audio }}" length="{{ episode.data.audioSize }}"/>
+                <guid isPermaLink="true">{{ site.siteLink }}{{ episode.url }}{{ episode.data.audio }}</guid>
             </item>
         {%- endfor %}
 
