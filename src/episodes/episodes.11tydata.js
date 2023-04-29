@@ -2,6 +2,8 @@ const path = require('node:path');
 const fs = require('node:fs/promises');
 
 module.exports = {
+	tags: 'episode',
+	layout: 'episode.njk',
 	eleventyComputed: {
 		audioSize: async function(data) {
 			const {
