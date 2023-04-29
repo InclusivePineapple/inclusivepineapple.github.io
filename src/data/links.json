@@ -5,13 +5,13 @@
     "telegram": "https://t.me/inclusivepineapple/"
   },
   "platforms": {
-	  "googlepodcasts": "https://podcasts.google.com/",
+	  "googlepodcasts": "https://podcasts.google.com/feed/aHR0cHM6Ly9pbmNsdXNpdmVwaW5lYXBwbGUuZ2l0aHViLmlvL2ZlZWQueG1s",
 	  "apple": "https://podcasts.apple.com/us/podcast/инклюзивный-ананас/id1684261424",
     "yandex": "https://music.yandex.ru/album/25666814",
     "spotify": "https://podcasters.spotify.com/pod/show/75882",
     "youtube": "https://www.youtube.com/@inclusivepineapple",
     "rss": "https://inclusivepineapple.github.io/feed.xml"
-    
+
   },
   "copyright": {
     "github": "https://github.com/InclusivePineapple/",
