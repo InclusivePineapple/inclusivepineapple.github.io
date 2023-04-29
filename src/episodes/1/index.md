@@ -5,7 +5,6 @@ number: 1
 duration: 3018
 audio: episode-1.mp3
 date: 2023-04-25
-cover: cover.jpg
 ---
 
 ## Темы
