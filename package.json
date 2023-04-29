@@ -7,8 +7,9 @@
   "license": "ISC",
   "scripts": {
     "buildCss": "postcss src/styles/styles.css -o dist/styles/styles.css",
-    "test": "concurrently \"postcss src/styles/styles.css -o dist/styles/styles.css -w\" \"eleventy --serve\"",
-    "build": "eleventy --quiet && npm run buildCss",
+    "buildJs": "esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --target=es2020 --bundle --minify",
+    "test": "concurrently \"postcss src/styles/styles.css -o dist/styles/styles.css -w\" \"esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --bundle --watch\" \"eleventy --serve --watch\"",
+    "build": "eleventy --quiet && npm run buildCss && npm run buildJs",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -27,5 +28,8 @@
     "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0",
     "pretty-data": "^0.40.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.18"
   }
 }
