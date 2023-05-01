@@ -21,6 +21,7 @@
     "gh-pages": "^5.0.0",
     "html-minifier": "^4.0.0",
     "markdown-it": "^13.0.1",
+    "musicmetadata": "^2.0.5",
     "nunjucks": "^3.2.3",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
