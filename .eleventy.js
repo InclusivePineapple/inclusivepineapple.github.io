@@ -4,6 +4,9 @@ const markdownIt = require("markdown-it");
 const prettyData = require("pretty-data");
 const htmlmin = require("html-minifier");
 const linkedom = require("linkedom");
+const fs = require("node:fs");
+const path = require("node:path");
+const crypto = require("node:crypto");
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/manifest.json');
@@ -59,6 +62,22 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addFilter("min", (...numbers) => {
 		return Math.min.apply(null, numbers);
+	});
+
+	// Хэш файла для правильной работы кеша
+	const assetHashes = {};
+
+	eleventyConfig.addFilter("filehash", (url) => {
+		const filePath = path.join(eleventyConfig.dir.input, url);
+
+		if (!assetHashes[url]) {
+			const fileBuffer = fs.readFileSync(filePath);
+			const hashSum = crypto.createHash("md5");
+			hashSum.update(fileBuffer);
+			assetHashes[url] = hashSum.digest("hex");
+		}
+
+		return `${url}?v=${assetHashes[url]}`;
 	});
 
 	// Трансформации
