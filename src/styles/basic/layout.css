@@ -33,6 +33,7 @@
 .content {
 	width: 100%;
 	max-width: 780px;
-	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
 	padding: 0 20px;
 }

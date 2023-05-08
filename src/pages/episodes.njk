@@ -5,16 +5,12 @@ layout: page.njk
 permalink: episodes/index.html
 ---
 
-<div class="container">
-	<div class="content">
-		<main class="main">
-			<h1>Все выпуски</h1>
+<main class="container content">
+	<h1>Все выпуски</h1>
 
-			{% set episodeslist = collections.episode %}
+	{% set episodeslist = collections.episode %}
 
-			<div class="cards">
-				{% include "card.njk" %}
-			</div>
-		</main>
+	<div class="cards">
+		{% include "card.njk" %}
 	</div>
-</div>
+</main>
