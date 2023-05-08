@@ -1,16 +1,11 @@
 .footer {
-	width: 100%;
-	margin-top: 80px;
-}
-
-.content__footer {
 	display: flex;
 	flex-direction: column;
 	padding: 28px;
 }
 
-.footer__links {
-	display: flex;
+.footer__navigation {
+	margin-bottom: 30px;
 }
 
 .footer__links-list {
@@ -23,11 +18,6 @@
 
 .footer__links-list li:not(:last-of-type) {
 	padding-right: 20px;
-}
-
-.footer__copyright {
-	margin-top: 30px;
-	font-size: 1rem;
 }
 
 .footer__info {
