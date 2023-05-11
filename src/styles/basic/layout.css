@@ -13,7 +13,7 @@
 	}
 }
 
-.body {
+.page__body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
@@ -25,6 +25,10 @@
 	background: #e3e9ed;
 }
 
+.page__footer {
+	margin-top: 80px;
+}
+
 .container {
 	flex: 1 0 auto;
 	margin-top: 60px;
@@ -33,6 +37,7 @@
 .content {
 	width: 100%;
 	max-width: 780px;
-	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
 	padding: 0 20px;
 }
