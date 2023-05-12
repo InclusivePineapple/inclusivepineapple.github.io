@@ -31,17 +31,15 @@ permalink: index.html
 		<li>Вадим Макеев — поддержал идею и рассказал, как сделать так, чтобы подкаст услышали на всех платформах.</li>
 	</ul>
 
-	<section aria-labelledby="heading">
-		<h2 id="heading">Последние выпуски</h2>
+	<section class="cards" aria-labelledby="heading">
+		<h2 class="cards__title" id="heading">Последние выпуски</h2>
 
 		{% set maxEpisodes = collections.episode.length | min(5) %}
 		{% set episodeslist = collections.episode | slice(-5) %}
-		<div class="cards">
-			{% include "card.njk" %}
-		</div>
+		{% include "card.njk" %}
 
 		{% if maxEpisodes === 5 %}
-			<a href="{{ '/episodes' | url }}">Все выпуски</a>
+			<a class="cards__link" href="{{ '/episodes' | url }}">Все выпуски</a>
 		{% endif %}
 	</section>
 </main>
