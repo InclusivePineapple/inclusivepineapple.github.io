@@ -1,5 +1,6 @@
 .header {
-	display: flex;
-	align-items: center;
-	padding: 20px 0;
+	--header-space-y: 20px;
+
+	padding-top: var(--header-space-y);
+	padding-bottom: var(--header-space-y);
 }
