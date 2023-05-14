@@ -1,9 +1,6 @@
 .header {
-	width: 100%;
-}
+	--header-space-y: 20px;
 
-.content__header {
-	display: flex;
-	align-items: center;
-	padding: 20px 0;
+	padding-top: var(--header-space-y);
+	padding-bottom: var(--header-space-y);
 }

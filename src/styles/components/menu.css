@@ -1,10 +1,9 @@
 .nav {
 	display: flex;
 	justify-content: center;
-	width: 100%;
 }
 
-.logo-link__image {
+.logo__image {
 	width: 160px;
 	height: auto;
 	background: #FFE665;
@@ -12,20 +11,20 @@
 }
 
 @media (max-width: 768px) {
-	.logo-link__image {
+	.logo__image {
 		width: 100px;
 	}
 }
 
-.nav .logo-link {
+.nav .logo {
 	display: inline-flex;
 	border-bottom: 0;
 }
 
-.nav .logo-link:hover {
+.nav .logo:hover {
 	background: inherit;
 }
 
-.nav .logo-link:hover .logo-link__image {
+.nav .logo:hover .logo__image {
 	background: #d3d3d3;
 }
