@@ -31,6 +31,7 @@
     "pretty-data": "^0.40.0"
   },
   "devDependencies": {
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "esbuild": "^0.17.18"
   }
 }
