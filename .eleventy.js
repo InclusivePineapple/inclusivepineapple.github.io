@@ -25,9 +25,9 @@ module.exports = function(eleventyConfig) {
 	// Sitemap
 	eleventyConfig.addPlugin(pluginSitemap, {
 		sitemap: {
-      hostname: "https://inclusivepineapple.github.io/",
-    },
-	})
+			hostname: "https://inclusivepineapple.github.io/",
+		},
+	});
 
 	// Навигация
 	eleventyConfig.addPlugin(pluginNavigation);
