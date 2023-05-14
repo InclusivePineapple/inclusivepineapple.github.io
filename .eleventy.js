@@ -68,7 +68,11 @@ module.exports = function(eleventyConfig) {
 	const assetHashes = {};
 
 	eleventyConfig.addFilter("filehash", (url) => {
-		const filePath = path.join(eleventyConfig.dir.input, url);
+		if (process.env.MODE !== 'production') {
+			return url;
+		}
+
+		const filePath = path.join(eleventyConfig.dir.output, url);
 
 		if (!assetHashes[url]) {
 			const fileBuffer = fs.readFileSync(filePath);
