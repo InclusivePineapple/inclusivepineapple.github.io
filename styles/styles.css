@@ -7,8 +7,8 @@
 	font-style: normal;
 	font-weight: normal;
 	font-display: swap;
-	src: url("../fonts/roboto-v30-cyrillic_latin-regular.woff2") format("woff2"),
-		url("../fonts/roboto-v30-cyrillic_latin-regular.woff") format("woff")
+	src: url("../fonts/roboto/roboto-regular.woff2") format("woff2"),
+		url("../fonts/roboto/roboto-regular.woff") format("woff")
 }
 
 /* Жирное начертание */
@@ -18,8 +18,8 @@
 	font-style: normal;
 	font-weight: bold;
 	font-display: swap;
-	src: url('../fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'),
-		url('../fonts/roboto-v30-cyrillic_latin-700.woff') format('woff')
+	src: url("../fonts/roboto/roboto-bold.woff2") format("woff2"),
+		url("../fonts/roboto/roboto-bold.woff") format("woff")
 }
 
 /* Моно */
@@ -29,8 +29,8 @@
 	font-style: normal;
 	font-weight: normal;
 	font-display: swap;
-	src: url('../fonts/roboto-mono-v22-latin-regular.woff2') format('woff2'),
-		url('../fonts/roboto-mono-v22-latin-regular.woff') format('woff')
+	src: url("../fonts/roboto-mono/roboto-mono-regular.woff2") format("woff2"),
+		url("../fonts/roboto-mono/roboto-mono-regular.woff2") format("woff")
 }
 
 .visually-hidden {
@@ -152,7 +152,7 @@
     border-bottom: 0;
 }
 
-.logo-link:focus {
+.logo:focus {
     border-radius: 50%;
 }
 
@@ -190,18 +190,18 @@
 }
 
 .header {
-	display: flex;
-	align-items: center;
-	padding: 20px 0;
+	--header-space-y: 20px;
+
+	padding-top: var(--header-space-y);
+	padding-bottom: var(--header-space-y);
 }
 
 .nav {
 	display: flex;
 	justify-content: center;
-	width: 100%;
 }
 
-.logo-link__image {
+.logo__image {
 	width: 160px;
 	height: auto;
 	background: #FFE665;
@@ -209,52 +209,43 @@
 }
 
 @media (max-width: 768px) {
-	.logo-link__image {
+	.logo__image {
 		width: 100px;
 	}
 }
 
-.nav .logo-link {
+.nav .logo {
 	display: inline-flex;
 	border-bottom: 0;
 }
 
-.nav .logo-link:hover {
+.nav .logo:hover {
 	background: inherit;
 }
 
-.nav .logo-link:hover .logo-link__image {
+.nav .logo:hover .logo__image {
 	background: #d3d3d3;
 }
 
 .footer {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 8px;
 	padding: 28px;
 }
 
 .footer__navigation {
-	margin-bottom: 30px;
+	margin-bottom: 22px;
 }
 
 .footer__links-list {
 	display: flex;
-	list-style: none;
 	flex-wrap: wrap;
-	padding: 0;
-	margin: 0;
-}
-
-.footer__links-list li:not(:last-of-type) {
-	padding-right: 20px;
-}
-
-.footer__info {
-	display: block;
-}
-
-.footer__info:not(:last-of-type) {
-	margin-bottom: 8px;
+	gap: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: none;
 }
 
 .cards {
