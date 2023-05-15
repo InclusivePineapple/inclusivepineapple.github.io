@@ -5,13 +5,15 @@ const titleIdMap = JSON.parse(
 	fs.readFileSync(path.join(process.cwd(), 'title-id-map.json'), { encoding: 'utf-8' })
 );
 
+const contentContainerSelector = 'main.content > .post';
+
 /**
  * @param {ReturnType<import('linkedom').parseHTML>} window
  * @param {string} content
  * @param {string} outputPath
  */
 module.exports = function(window, content, outputPath) {
-	const contentElement = window.document.querySelector('.main .post');
+	const contentElement = window.document.querySelector(contentContainerSelector);
 
 	if (!contentElement) {
 		return;
