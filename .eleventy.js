@@ -1,3 +1,4 @@
+const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
@@ -23,6 +24,13 @@ module.exports = function(eleventyConfig) {
 		linkify: true
 	};
 	eleventyConfig.setLibrary("md", markdownIt(options).disable("code"));
+
+	// Sitemap
+	eleventyConfig.addPlugin(pluginSitemap, {
+		sitemap: {
+			hostname: "https://inclusivepineapple.github.io/",
+		},
+	});
 
 	// Навигация
 	eleventyConfig.addPlugin(pluginNavigation);
