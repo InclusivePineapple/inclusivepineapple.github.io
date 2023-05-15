@@ -12,6 +12,7 @@ const crypto = require("node:crypto");
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('src/manifest.json');
 	eleventyConfig.addPassthroughCopy("src/fonts");
+	eleventyConfig.addPassthroughCopy("src/robots.txt");
 	eleventyConfig.addPassthroughCopy({ "src/assets/*.{svg,jpg,png}": "assets" });
 	eleventyConfig.addPassthroughCopy({ "src/assets/favicons/*.{svg,jpg,png,ico}": "assets/favicons" });
 	eleventyConfig.addPassthroughCopy( "src/episodes/**/*.(gif|jpg|png|webp|svg)");
