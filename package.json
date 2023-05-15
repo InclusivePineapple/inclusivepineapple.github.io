@@ -9,7 +9,7 @@
     "buildCss": "postcss src/styles/styles.css -o dist/styles/styles.css",
     "buildJs": "esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --target=es2020 --bundle --minify",
     "test": "concurrently \"postcss src/styles/styles.css -o dist/styles/styles.css -w\" \"esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --bundle --watch\" \"eleventy --serve --watch\"",
-    "build": "eleventy --quiet && npm run buildCss && npm run buildJs",
+    "build": "npm run buildCss && npm run buildJs && cross-env MODE=production eleventy --quiet",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "pretty-data": "^0.40.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "esbuild": "^0.17.18"
   }

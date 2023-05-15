@@ -13,8 +13,8 @@
 	<meta name="description" content="{{ description or site.description }}">
 	<title>{{ title or site.title }}{{ titleSub }}</title>
 	{% include "open-graph.njk" %}
-	<script type="module" src="/scripts/scripts.js"></script>
-	<link rel="stylesheet" href="/styles/styles.css">
+	<script type="module" src="{{ "/scripts/scripts.js" | filehash }}"></script>
+	<link rel="stylesheet" href="{{ "/styles/styles.css" | filehash }}">
 	<link rel="alternate" href="{{ site.siteLink }}/feed.xml" type="application/rss+xml" title="Инклюзивный ананас">
 	{% include "favicons.njk" %}
 </head>
