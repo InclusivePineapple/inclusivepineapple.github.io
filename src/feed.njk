@@ -26,7 +26,7 @@ permalink: feed.xml
 
         {%- for episode in collections.episode | reverse  %}
             <item>
-                <title>{{ episode.data.title }}</title>
+                <title>{{ episode.data.number }}. {{ episode.data.title }}</title>
                 <description>{{ episode.data.description }}</description>
                 <itunes:episode>{{ episode.data.number }}</itunes:episode>
                 <pubDate>{{ episode.date.toUTCString() }}</pubDate>
