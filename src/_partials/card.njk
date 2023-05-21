@@ -4,8 +4,6 @@
 		<h3 class="card__title">
 			<a class="card__title-link" href="{{ episode.url }}">{{ episode.data.title }}</a>
 		</h3>
-		<span class="card__post-date">
-			<time datetime="{{ episode.date | htmlDateString }}">{{ episode.data.date | readableDate }}</time>
-		</span>
+		<time class="card__post-date" datetime="{{ episode.date | htmlDateString }}">{{ episode.data.date | readableDate }}</time>
 	</article>
 {%- endfor -%}
