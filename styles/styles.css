@@ -249,7 +249,17 @@
 }
 
 .cards {
-	margin-top: 32px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.cards__link {
+	justify-self: start;
+}
+
+.cards .cards__title {
+	margin-bottom: 12px;
 }
 
 .card {
@@ -266,10 +276,6 @@
 	.card {
 		padding: 10px;
 	}
-}
-
-.card {
-	margin-bottom: 20px;
 }
 
 .card:before {
