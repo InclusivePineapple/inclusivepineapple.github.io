@@ -34,7 +34,7 @@ date: 2023-05-23
 
 ### События
 
-- [GAAD Events](https://accessibility.day/events/#this-years-events). Список оффлайн и онлайн событий, приуроченных ко Всемирному дню осведомлённости о доступности. Расписание до 27 мая.
+- [GAAD Events](https://accessibility.day/events/#this-years-events). Список оффлайн и онлайн событий ко Всемирному дню осведомлённости о доступности. Расписание до 27 мая.
 - [CSS Day](https://cssday.nl/2023), 8–9 июня. Оффлайн и онлайн, платное.
 - [WordPress Accessibility Day](https://2023.wpaccessibility.day), 27–28 сентября, онлайн, бесплатное, открыто CFP.
 - [Google I/O](https://io.google/2023/), прошла 10 мая 2023, онлайн, бесплатное.
