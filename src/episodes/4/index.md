@@ -23,7 +23,7 @@ date: 2023-08-31
 - [WCAG 3 Working Draft Updated July 2023](https://www.w3.org/WAI/news/2023-07-24/wcag3/).
 - [Justice Department Advances Proposed Rule to Strengthen Web and Mobile App Access for People with Disabilities](https://www.justice.gov/opa/pr/justice-department-advances-proposed-rule-strengthen-web-and-mobile-app-access-people).
 - [The Business Case for Digital Accessibility](https://www.w3.org/WAI/business-case/).
-- Web Accessibility in High-Risk Segments.
+- [Web Accessibility in High-Risk Segments](https://karlgroves.com/web-accessibility-in-high-risk-segments/).
 - [What is digital accessibility, and why does it matter. Business impact](https://web.dev/learn/accessibility/why/#business-impact).
 - [Европейский закон о доступности](https://en.wikipedia.org/wiki/European_Accessibility_Act) (The European Accessibility Act, EAA).
 - [Доступность](https://youtu.be/90ewt96v79E?feature=shared) (видео), доклад Михаила Рубанова.
@@ -51,4 +51,4 @@ date: 2023-08-31
 
 ## Расшифровка
 
-Готовится 👩‍🍳
+Готовится 🍵
