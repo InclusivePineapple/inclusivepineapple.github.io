@@ -18,7 +18,6 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "autoprefixer": "^10.4.14",
     "concurrently": "^8.0.1",
-    "del": "6.1",
     "gh-pages": "^5.0.0",
     "html-minifier": "^4.0.0",
     "linkedom": "^0.14.26",
@@ -31,8 +30,8 @@
     "pretty-data": "^0.40.0"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "cross-env": "^7.0.3",
     "esbuild": "^0.17.18"
   }
 }
