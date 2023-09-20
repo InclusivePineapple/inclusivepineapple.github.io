@@ -2,7 +2,6 @@
   "name": "inclusive-pineapple-podcast",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
   "author": "Inclusive Pineapple",
   "license": "ISC",
   "scripts": {
