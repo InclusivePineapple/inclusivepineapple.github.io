@@ -77,7 +77,7 @@ module.exports = function(eleventyConfig) {
 	const assetHashes = {};
 
 	eleventyConfig.addFilter("filehash", (url) => {
-		if (process.env.MODE !== 'production') {
+		if (process.env.NODE_ENV !== 'production') {
 			return url;
 		}
 

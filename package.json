@@ -9,7 +9,7 @@
     "buildCss": "postcss src/styles/styles.css -o dist/styles/styles.css",
     "buildJs": "esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --target=es2020 --bundle --minify",
     "test": "concurrently \"postcss src/styles/styles.css -o dist/styles/styles.css -w\" \"esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --bundle --watch\" \"eleventy --serve --watch\"",
-    "build": "npm run buildCss && npm run buildJs && cross-env MODE=production eleventy --quiet",
+    "build": "cross-env-shell NODE_ENV=production \"npm run buildCss && npm run buildJs && eleventy --quiet\"",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
