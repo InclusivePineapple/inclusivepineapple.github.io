@@ -34,11 +34,11 @@ permalink: index.html
 	<section class="cards" aria-labelledby="heading">
 		<h2 class="cards__title" id="heading">Последние выпуски</h2>
 
-		{% set maxEpisodes = collections.episode.length | min(5) %}
-		{% set episodeslist = collections.episode | slice(-5) %}
+		{% set maxEpisodes = collections.episode.length | min(4) %}
+		{% set episodeslist = collections.episode | slice(-4) %}
 		{% include "card.njk" %}
 
-		{% if maxEpisodes === 5 %}
+		{% if maxEpisodes === 4 %}
 			<a class="cards__link" href="{{ '/episodes' | url }}">Все выпуски</a>
 		{% endif %}
 	</section>
