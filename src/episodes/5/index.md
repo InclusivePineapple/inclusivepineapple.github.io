@@ -31,6 +31,7 @@ date: 2023-09-26
 - [Клавиатура](https://tatiana-fokina-blog.ru/posts/wcag-keyboard/), Татьяна Фокина.
 - [Developing a focus style for a themable design system](https://adhoc.team/2022/02/08/creating-focus-style-for-themable-design-system/), Скотт Вебер.
 - [Developing a keyboard interface](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/), W3C.
+- [Жуткая история про кнопки из Твиттера](https://x.com/EmmaDawsonDev/status/1698929150726144436?s=20).
 
 ## Расшифровка
 
