@@ -25,9 +25,19 @@ permalink: feed.xml
         <atom:link href="{{ site.siteLink }}/feed.xml" rel="self" type="application/rss+xml"/>
 
         {%- for episode in collections.episode | reverse  %}
+						{% set timecodes = episode.content | extractTimecodes %}
+						{% set links = episode.content | extractLinks %}
             <item>
                 <title>{{ episode.data.number }}. {{ episode.data.title }}</title>
-                <description>{{ episode.data.description }}</description>
+                <description><![CDATA[<p>{{- episode.data.description -}}</p><h2>Темы</h2><ul>
+									{%- for timecode in timecodes -%}
+										<li>{{- timecode -}}</li>
+									{%- endfor -%}
+									</ul><h2>Ссылки</h2><ul>
+									{%- for link in links -%}
+										<li><a href="{{- link.href -}}" target="_blank">{{- link.text -}}</a></li>
+									{%- endfor -%}
+								</ul>]]></description>
                 <itunes:episode>{{ episode.data.number }}</itunes:episode>
                 <pubDate>{{ episode.date.toUTCString() }}</pubDate>
                 <link>{{ site.siteLink }}{{ episode.url }}</link>

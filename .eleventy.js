@@ -93,6 +93,42 @@ module.exports = function(eleventyConfig) {
 		return `${url}?v=${assetHashes[url]}`;
 	});
 
+	// Извлечение таймкодов из контента
+	eleventyConfig.addFilter("extractTimecodes", (content) => {
+		const { document } = linkedom.parseHTML(content);
+		const timecodes = [];
+
+		const heading = document.querySelectorAll('h2')[0];
+		const timecodesList = heading.nextElementSibling;
+
+		timecodesList.children.forEach(listItem => {
+			const a = listItem.firstElementChild;
+			const time = a.href.replace('#', '');
+			a.replaceWith(time);
+
+			timecodes.push(listItem.textContent);
+		});
+
+		return timecodes;
+	});
+
+	// Извлечение ссылок из контента
+	eleventyConfig.addFilter("extractLinks", (content) => {
+		const { document } = linkedom.parseHTML(content);
+		const links = [];
+
+		const heading = document.querySelectorAll('h2')[1];
+		const linksList = heading.nextElementSibling;
+
+		linksList.children.forEach(listItem => {
+			const a = listItem.firstElementChild;
+
+			links.push({ href: a.href, text: a.textContent });
+		});
+
+		return links;
+	});
+
 	// Трансформации
 	eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
 		if(outputPath && outputPath.endsWith(".html")) {
