@@ -43,7 +43,7 @@ date: 2024-05-13
 - [Enhancing Accessibility with AI and ML](https://www.deque.com/blog/enhancing-accessibility-with-ai-and-ml/).
 - [This Company Tapped AI for Its Website—and Landed in Court](https://www.wired.com/story/company-tapped-ai-website-landed-court/).
 - [New Apple podcasts transcripts are changing the way users consume podcasts](https://www.3playmedia.com/blog/apple-podcasts-transcripts-are-changing-the-way-users-consume-podcasts/).
-- [ShatGPT](https://html5accessibility.com/stuff/2023/05/08/shatgpt/).
+- [ChatGPT](https://html5accessibility.com/stuff/2023/05/08/shatgpt/).
 - [Dynamically adding text alternatives to images with AI](https://afixt.com/dynamically-adding-text-alternatives-to-images-with-ai/).
 - [Can generative AI help write accessible code?](https://tetralogical.com/blog/2024/02/12/can-generative-ai-help-write-accessible-code/)
 - [I worry our Copilot is leaving some passengers behind](https://joshcollinsworth.com/blog/copilot).
