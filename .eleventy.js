@@ -17,6 +17,9 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({ "src/assets/favicons/*.{svg,jpg,png,ico}": "assets/favicons" });
 	eleventyConfig.addPassthroughCopy( "src/episodes/**/*.(gif|jpg|png|webp|svg)");
 	eleventyConfig.addPassthroughCopy( "src/episodes/**/*.(mp3|m4a|wav|aac|ogg|aiff|wma|flac)");
+	if (process.env.ELEVENTY_ENV !== "production") {
+		eleventyConfig.addPassthroughCopy("src/styles");
+	}
 
 	// Маркдаун
 	let options = {

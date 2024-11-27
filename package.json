@@ -5,13 +5,13 @@
   "author": "Inclusive Pineapple",
   "license": "ISC",
   "scripts": {
-    "buildCss": "postcss src/styles/styles.css -o dist/styles/styles.css",
-    "buildJs": "esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --target=es2020 --bundle --minify",
-    "dev": "concurrently \"postcss src/styles/styles.css -o dist/styles/styles.css -w\" \"esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --bundle --watch\" \"eleventy --serve --watch\"",
-    "build": "cross-env-shell NODE_ENV=production \"npm run buildCss && npm run buildJs && eleventy --quiet\"",
-    "deploy": "gh-pages -d dist"
+    "watch": "concurrently \"esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --bundle --watch\" \"eleventy --serve\"",
+    "build": "cross-env-shell ELEVENTY_ENV=production \"npm-run-all _build:* && eleventy\"",
+    "deploy": "gh-pages -d dist",
+    "_build:js": "esbuild src/scripts/scripts.js --outfile=dist/scripts/scripts.js --target=es2020 --bundle --minify",
+    "_build:css": "npx lightningcss-cli --minify --bundle src/styles/styles.css -o dist/styles/styles.css"
   },
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
@@ -22,13 +22,12 @@
     "esbuild": "^0.24.0",
     "gh-pages": "^6.2.0",
     "html-minifier": "^4.0.0",
+    "lightningcss-cli": "^1.28.2",
     "linkedom": "^0.18.5",
     "markdown-it": "^14.1.0",
     "musicmetadata": "^2.0.5",
+    "npm-run-all": "^4.1.5",
     "nunjucks": "^3.2.4",
-    "postcss": "^8.4.49",
-    "postcss-cli": "^11.0.0",
-    "postcss-import": "^16.1.0",
     "pretty-data": "^0.40.0"
   }
 }
