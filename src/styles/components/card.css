@@ -39,7 +39,7 @@
     color: inherit;
 }
 
-.card:focus-within {
+.card:focus-within:has(:focus-visible) {
 	outline: 3px solid #272727;
 }
 

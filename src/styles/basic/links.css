@@ -9,12 +9,12 @@
     color: inherit;
 }
 
-.content a:focus {
+.content a:focus-visible {
     outline: 3px solid #272727;
     outline-offset: 1px;
     border-bottom: 0;
 }
 
-.logo:focus {
+.logo:focus-visible {
     border-radius: 50%;
 }
