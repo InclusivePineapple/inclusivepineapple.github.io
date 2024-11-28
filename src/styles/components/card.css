@@ -20,6 +20,7 @@
 	padding: 20px;
 	border: 2px solid #272727;
 	border-radius: 22px;
+	background-color: #fff;
 }
 
 @media (max-width: 768px) {
