@@ -48,9 +48,6 @@
 	&.--twitter:before {
 		background-image: url(/assets/twitter.svg);
 	}
-	&.--facebook:before {
-		background-image: url(/assets/facebook.svg);
-	}
 	&.--telegram:before {
 		background-image: url(/assets/telegram.svg);
 	}
