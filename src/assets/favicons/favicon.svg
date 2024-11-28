@@ -1,0 +1,14 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1216_251)">
+<path d="M400 200C400 310.457 310.457 400 200 400C89.5431 400 0 310.457 0 200C0 89.5431 89.5431 0 200 0C310.457 0 400 89.5431 400 200Z" fill="url(#paint0_diamond_1216_251)"/>
+</g>
+<defs>
+<radialGradient id="paint0_diamond_1216_251" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 200) rotate(-90) scale(129 176.291)">
+<stop stop-color="#E9C300"/>
+<stop offset="1" stop-color="#FFE665"/>
+</radialGradient>
+<clipPath id="clip0_1216_251">
+<rect width="400" height="400" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -7,12 +7,12 @@
         {
           "icons": [
             {
-                "src": "/assets/favicons/icon-192.png",
+                "src": "/assets/favicons/favicon-192.png",
                 "type": "image/png",
                 "sizes": "192x192"
             },
             {
-                "src": "/assets/favicons/icon-512.png",
+                "src": "/assets/favicons/favicon-512.png",
                 "type": "image/png",
                 "sizes": "512x512"
             }
