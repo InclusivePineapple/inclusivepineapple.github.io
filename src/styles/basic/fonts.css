@@ -4,8 +4,8 @@
 	font-style: normal;
 	font-weight: normal;
 	font-display: swap;
-	src: url("../fonts/roboto/roboto-regular.woff2") format("woff2"),
-		url("../fonts/roboto/roboto-regular.woff") format("woff")
+	src: url("/fonts/roboto/roboto-regular.woff2") format("woff2"),
+		url("/fonts/roboto/roboto-regular.woff") format("woff")
 }
 
 /* Жирное начертание */
@@ -14,8 +14,8 @@
 	font-style: normal;
 	font-weight: bold;
 	font-display: swap;
-	src: url("../fonts/roboto/roboto-bold.woff2") format("woff2"),
-		url("../fonts/roboto/roboto-bold.woff") format("woff")
+	src: url("/fonts/roboto/roboto-bold.woff2") format("woff2"),
+		url("/fonts/roboto/roboto-bold.woff") format("woff")
 }
 
 /* Моно */
