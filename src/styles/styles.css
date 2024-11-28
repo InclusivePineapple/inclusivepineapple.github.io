@@ -6,6 +6,7 @@
 @import "basic/text.css";
 @import "basic/links.css";
 @import "basic/contrast-and-inverted-colors.css";
+@import "components/platforms.css";
 @import "components/episode.css";
 @import "components/header.css";
 @import "components/menu.css";

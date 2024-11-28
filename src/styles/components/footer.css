@@ -4,17 +4,3 @@
 	gap: 8px;
 	padding: 28px;
 }
-
-.footer__navigation {
-	margin-bottom: 22px;
-}
-
-.footer__links-list {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-	margin-top: 0;
-	margin-bottom: 0;
-	padding-left: 0;
-	list-style-type: none;
-}
