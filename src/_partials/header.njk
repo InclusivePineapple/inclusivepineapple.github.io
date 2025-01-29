@@ -1,3 +1,30 @@
-<header class="header content">
+<header class="header">
 	{% include "menu.njk" %}
 </header>
+<nav class="platforms container" aria-label="Соцсети и платформы">
+	<ul class="platforms__list">
+		<li class="platforms__listItem">
+			<a class="platforms__link --youtube" href="{{ links.platforms.youtube }}" lang="en">YouTube</a>
+		</li>
+		<li class="platforms__listItem">
+			<a class="platforms__link --apple" href="{{ links.platforms.apple }}" lang="en">Apple Podcasts</a>
+		</li>
+		<li class="platforms__listItem">
+			<a class="platforms__link --yandex" href="{{ links.platforms.yandex }}">Яндекс Музыка</a>
+		</li>
+		<li class="platforms__listItem">
+			<a class="platforms__link --spotify" href="{{ links.platforms.spotify }}" lang="en">Spotify</a>
+		</li>
+	</ul>
+	<ul class="platforms__list">
+		<li class="platforms__listItem">
+			<a class="platforms__link --telegram" href="{{ links.social.telegram }}" lang="en">Telegram</a>
+		</li>
+		<li class="platforms__listItem">
+			<a class="platforms__link --twitter" href="{{ links.social.twitter }}" lang="en">Twitter</a>
+		</li>	
+		<li class="platforms__listItem">
+			<a class="platforms__link --rss" href="{{ links.platforms.rss }}" lang="en">RSS</a>
+		</li>
+	</ul>
+</nav>

@@ -1,0 +1,62 @@
+.platforms {
+	gap: 12px;
+	display: grid;
+	margin-top: 12px;
+	margin-bottom: 40px;
+}
+
+.platforms__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.platforms__listItem {
+	display: inline-flex;
+}
+
+.platforms__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+
+	&:before {
+		content: "";
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		display: block;
+	}
+	&.--apple:before {
+		background-image: url(/assets/apple-podcasts.svg);
+	}
+	&.--youtube:before {
+		background-image: url(/assets/youtube.svg);
+	}
+	&.--yandex:before {
+		background-image: url(/assets/yandex-music.svg);
+	}
+	&.--spotify:before {
+		background-image: url(/assets/spotify.svg);
+	}
+	&.--twitter:before {
+		background-image: url(/assets/twitter.svg);
+	}
+	&.--telegram:before {
+		background-image: url(/assets/telegram.svg);
+	}
+	&.--rss:before {
+		background-image: url(/assets/rss.svg);
+	}
+}
+
+
+
+
+

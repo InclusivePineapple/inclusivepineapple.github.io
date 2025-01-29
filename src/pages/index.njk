@@ -4,7 +4,20 @@ permalink: index.html
 ---
 
 <main class="container content">
-	<h1>О подкасте</h1>
+	<h1 class="visually-hidden">{{ site.title }}</h1>
+	<section class="cards" aria-labelledby="heading">
+		<h2 class="cards__title" id="heading">Последние выпуски</h2>
+
+		{% set maxEpisodes = collections.episode.length | min(2) %}
+		{% set episodeslist = collections.episode | slice(-2) %}
+		{% include "card.njk" %}
+
+		{% if maxEpisodes === 2 %}
+			<a class="cards__link" href="{{ '/episodes' | url }}">Все выпуски</a>
+		{% endif %}
+	</section>
+
+	<h2>О подкасте</h2>
 
 	<p>Инклюзивный ананас — это подкаст, в котором Глаша Жур и Таня Фокина обсуждают цифровую доступность.</p>
 
@@ -30,16 +43,4 @@ permalink: index.html
 		<li>Вася Дудин — помогал разобраться в суровом мире подкастов и давал полезные советы.</li>
 		<li>Вадим Макеев — поддержал идею и рассказал, как сделать так, чтобы подкаст услышали на всех платформах.</li>
 	</ul>
-
-	<section class="cards" aria-labelledby="heading">
-		<h2 class="cards__title" id="heading">Последние выпуски</h2>
-
-		{% set maxEpisodes = collections.episode.length | min(4) %}
-		{% set episodeslist = collections.episode | slice(-4) %}
-		{% include "card.njk" %}
-
-		{% if maxEpisodes === 4 %}
-			<a class="cards__link" href="{{ '/episodes' | url }}">Все выпуски</a>
-		{% endif %}
-	</section>
 </main>

@@ -19,7 +19,8 @@
 	width: 100%;
 	padding: 20px;
 	border: 2px solid #272727;
-	border-radius: 4px;
+	border-radius: 22px;
+	background-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -38,7 +39,7 @@
     color: inherit;
 }
 
-.card:focus-within {
+.card:focus-within:has(:focus-visible) {
 	outline: 3px solid #272727;
 }
 
